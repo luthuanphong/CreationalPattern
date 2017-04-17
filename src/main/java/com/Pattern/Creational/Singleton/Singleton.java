@@ -33,7 +33,7 @@ public class Singleton {
 	static{
 		Reflections reflections = new Reflections();
 		Set<Class<?>> annotationRegisterClasses = 
-				reflections.getTypesAnnotatedWith(RegistySingleton.class);
+				reflections.getTypesAnnotatedWith(RegistrySingleton.class);
 		for( Class<?> c : annotationRegisterClasses ){
 			try {
 				objectPool.put(c, c.newInstance());
